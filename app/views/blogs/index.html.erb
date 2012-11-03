@@ -1,0 +1,141 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>
+			Capture Art
+		</title>
+		<link href='http://fonts.googleapis.com/css?family=Marcellus' rel='stylesheet' type='text/css'/>
+		
+		<link rel="stylesheet" type="text/css" href="style2.css" />
+	</head>
+	<body>
+		<div id="bg1"></div>
+		<div id="bg2"></div>
+		<div id="outer">
+			<div id="header">
+				<div id="logo">
+					<h1>
+						<a><img src="http://www.freeimagehosting.net/newuploads/z6fhc.png" alt="capture chicago"/></a>
+					</h1>
+				</div>
+									<div id="search">
+										<form action="" method="post">
+											<div>
+												<input class="text" name="search" size="32" maxlength="64" />
+											</div>
+										</form>
+						</div>
+						<div id="nav">
+							<ul>
+								<li class="first">
+									<%= link_to 'Home', blogs_path %>
+								</li>
+								<li>
+									<a href="#">Purchase Prints</a>
+								</li>
+								<li>
+									<a href="#">Graphic Design Services</a>
+								</li>
+								<li>
+									<a href="#">Mobile App</a>
+								</li>
+								<li>
+									<a href="#">Blog</a>
+								</li>
+								<li>
+									<a href="#">Portfolio</a>
+								</li>
+								<li>
+									<a href="#">About</a>
+								</li>
+								<li class="last">
+									<a href="#">Contact</a>
+								</li>
+							</ul><br class="clear" />
+						</div>
+					</div>
+					<div id="banner">
+						<div class="captions">
+							<h2><img src="http://www.freeimagehosting.net/newuploads/k3y6j.png"/></h2>
+						</div>
+						<img src="http://www.freeimagehosting.net/newuploads/olmgx.jpg" alt="" />
+					</div>
+					<div id="main">
+						<div id="sidebar">
+							<div class="box">
+								<h3>
+									Recent Photo Shoots
+								</h3>
+								<div class="dateList">
+									<ul class="linkedList dateList">
+										<li class="first">
+											<span class="date">Oct 5</span> <a href="#">Chicago Night Walk</a>
+										</li>
+										<li>
+											<span class="date">Oct 4</span> <a href="#">Chicago Cloud Gate</a>
+										</li>
+										<li>
+											<span class="date">Jul 7</span> <a href="#">San Francisco Bridge</a>
+										</li>
+										<li>
+											<span class="date">Jul 2</span> <a href="#">Ft Lauderdale Night Walk</a>
+										</li>
+										<li>
+											<span class="date">Jun 28</span> <a href="#">Venice Beach</a>
+										</li>
+										<li class="last">
+											<span class="date">Jun 24</span> <a href="#">Negril Fire Breather</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="box">
+								<h3>
+									Did <strong>you</strong> capture art?
+								</h3>
+								<p>
+									<%= link_to 'Create New Post', new_blog_path %>
+								</p>
+							</div>
+								</div>
+<div id="content">
+	<div class="box">
+
+		<h2>
+			<strong>Capture of the Week </strong> - <% @blogs.each do |blog| %>
+				<%= blog.title %>
+				<%end%>
+		</h2>
+		
+		<img src="http://imageshack.us/a/img707/6016/hankcock300tall.jpg" width="171" height="275" alt="" class="left" />
+
+
+		<% @blogs.each do |blog| %>
+
+<p<%= blog.title %></p>
+<p><%= blog.description %></p>
+<p><%= link_to 'Link to Full Size Image', blog %></p>
+<p><%= link_to 'Edit Image details', edit_blog_path(blog) %></p>
+<p><%= link_to 'Delete Image', blog, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+		<% end %>
+		
+		</table>
+		
+	</div>
+
+
+
+<br />
+	
+	</div><br class="clear" />
+</div><br class="clear" />
+</div>
+</div>
+<div id="copyright">
+&copy; CaptureArt.com 
+</div>
+</body>
+</html>
+

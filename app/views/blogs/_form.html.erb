@@ -1,0 +1,33 @@
+<%= form_for(@blog) do |f| %>
+  <% if @blog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+
+      <ul>
+      <% @blog.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+<p>
+<form method="POST" enctype="multipart/form-data" action="fup.cgi">
+File to upload: <input type="file" name="upfile"><br>
+<!-- Notes about the file: <input type="text" name="note"> --><br>
+<br>
+<!-- <input type="submit" value="Press"> to upload the file! -->
+</form>
+</p>  
+</div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
