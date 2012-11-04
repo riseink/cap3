@@ -1,13 +1,3 @@
-/*
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 3.0 License
-
-Name       : Unofficial Channels
-Description: A two-column, fixed-width design with a bright color scheme.
-Version    : 1.0
-Released   : 20120723
-*/
 
 * {
 	margin: 0;
@@ -116,6 +106,7 @@ ul {
 
 #banner {
 	position: relative;
+	bottom: 15px;
 	width: 1180px;
 	height: 300px;
 }
