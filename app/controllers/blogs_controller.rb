@@ -81,3 +81,7 @@ class BlogsController < ApplicationController
     end
   end
 end
+
+def search
+  @blogs = Blogs.search params[:search]
+end
