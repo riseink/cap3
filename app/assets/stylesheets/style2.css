@@ -114,7 +114,7 @@ ul {
 #banner .captions {
 	position: absolute;
 	right: 0;
-	top: 224px;
+	top: 25px;
 	text-shadow: 2px 2px 0px rgba(0,0,0,1.0);
 }
 
@@ -161,7 +161,7 @@ ul {
 
 #logo {
 	position: absolute;
-	bottom: 0;
+	bottom: -20px;
 	left: 28px;
 	height: 138px;
 	line-height: 138px;
